@@ -1,3 +1,3 @@
-ent-ClothingHeadsetIAA = iaa headset
-    .desc = A headset for internal affairs agent to hear the captain's last words.
+ent-ClothingHeadsetIAA = internal affairs agent's headset
+    .desc = A headset worn by the internal affairs agent, used to listen to screams of dying captains.
     .suffix = { "" }

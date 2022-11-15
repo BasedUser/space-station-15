@@ -1,3 +1,3 @@
-ent-IAAPDA = internal affairs agent PDA
-    .desc = Corporation and profit are best friends.
+ent-IAAPDA = internal affairs agent's PDA
+    .desc = The words 'corporation' and 'profit' surely are best friends.
     .suffix = { "" }

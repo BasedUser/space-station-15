@@ -1,3 +1,3 @@
-ent-StationGoalPaper = station goal centcomm message
-    .desc = It looks like you have a lot of work to do.
+ent-StationGoalPaper = centcomm shift goal message
+    .desc = It seems you've got work to do.
     .suffix = { "" }
