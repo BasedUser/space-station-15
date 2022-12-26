@@ -23,10 +23,7 @@ using Content.Client.Viewport;
 using Content.Client.Voting;
 using Content.Shared.Administration;
 using Content.Shared.AME;
-using Content.Shared.Chemistry.Components;
-using Content.Shared.Chemistry.Dispenser;
 using Content.Shared.Gravity;
-using Content.Shared.Lathe;
 using Content.Shared.Localizations;
 using Content.Shared.Markers;
 using Robust.Client;
@@ -35,10 +32,6 @@ using Robust.Client.Input;
 using Robust.Client.State;
 using Robust.Client.UserInterface;
 using Robust.Shared.Configuration;
-#if FULL_RELEASE
-using Robust.Shared;
-using Robust.Shared.Configuration;
-#endif
 using Robust.Shared.ContentPack;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
@@ -74,10 +67,8 @@ namespace Content.Client.Entry
         [Dependency] private readonly ExtendedDisconnectInformationManager _extendedDisconnectInformation = default!;
         [Dependency] private readonly PlayTimeTrackingManager _playTimeTracking = default!;
         [Dependency] private readonly ContentLocalizationManager _contentLoc = default!;
-        [Dependency] private readonly ClientSponsorsManager _sponsorsManager = default!; // Corvax-Sponsors
+        [Dependency] private readonly SponsorsManager _sponsorsManager = default!; // Corvax-Sponsors
         [Dependency] private readonly JoinQueueManager _queueManager = default!; // Corvax-Queue
-
-        public const int NetBufferSizeOverride = 2;
 
         public override void Init()
         {
@@ -91,11 +82,6 @@ namespace Content.Client.Entry
 
             IoCManager.BuildGraph();
             IoCManager.InjectDependencies(this);
-
-#if FULL_RELEASE
-            // if FULL_RELEASE, because otherwise this breaks some integration tests.
-            IoCManager.Resolve<IConfigurationManager>().OverrideDefault(CVars.NetBufferSize, NetBufferSizeOverride);
-#endif
 
             _contentLoc.Initialize();
             _componentFactory.DoAutoRegistrations();
@@ -135,7 +121,8 @@ namespace Content.Client.Entry
             _prototypeManager.RegisterIgnore("wireLayout");
             _prototypeManager.RegisterIgnore("alertLevels");
             _prototypeManager.RegisterIgnore("nukeopsRole");
-            _prototypeManager.RegisterIgnore("stationGoal");
+            _prototypeManager.RegisterIgnore("stationGoal"); // Corvax-StationGoal
+            _prototypeManager.RegisterIgnore("loadout"); // Corvax-Loadout
             _prototypeManager.RegisterIgnore("flavor");
 
             _componentFactory.GenerateNetIds();

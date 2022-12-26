@@ -11,7 +11,7 @@ accent-words-dog-3 = Вуф!
 accent-words-dog-4 = Гаф.
 accent-words-dog-5 = Гррр.
 # Mouse
-accent-words-mouse-1 = Пииии!
+accent-words-mouse-1 = Скуик!
 accent-words-mouse-2 = Пиип!
 accent-words-mouse-3 = Чууу!
 accent-words-mouse-4 = Ииии!
@@ -52,3 +52,8 @@ accent-words-chicken-1 = Кудах!
 accent-words-chicken-2 = Кудах.
 accent-words-chicken-3 = Кудах?
 accent-words-chicken-4 = Кудах тах-тах!
+# Pig
+accent-words-pig-1 = Хрю.
+accent-words-pig-2 = Хрю?
+accent-words-pig-3 = Хрю!
+accent-words-pig-4 = Хрю Хрю!
