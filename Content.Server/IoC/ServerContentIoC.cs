@@ -18,6 +18,7 @@ using Content.Server.Objectives;
 using Content.Server.Objectives.Interfaces;
 using Content.Server.Players.PlayTimeTracking;
 using Content.Server.Preferences.Managers;
+using Content.Server.ServerInfo;
 using Content.Server.ServerUpdates;
 using Content.Server.Voting.Managers;
 using Content.Shared.Administration;
@@ -57,8 +58,9 @@ namespace Content.Server.IoC
             IoCManager.Register<IAdminLogManager, AdminLogManager>();
             IoCManager.Register<PlayTimeTrackingManager>();
             IoCManager.Register<UserDbDataManager>();
-            IoCManager.Register<ServerSponsorsManager>(); // Corvax-Sponsors
+            IoCManager.Register<SponsorsManager>(); // Corvax-Sponsors
             IoCManager.Register<JoinQueueManager>(); // Corvax-Queue
+            IoCManager.Register<ServerInfoManager>();
         }
     }
 }

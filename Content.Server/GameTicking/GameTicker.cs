@@ -3,10 +3,8 @@ using Content.Server.Administration.Managers;
 using Content.Server.Chat;
 using Content.Server.Chat.Managers;
 using Content.Server.Chat.Systems;
-using Content.Server.Corvax.Sponsors;
 using Content.Server.Database;
 using Content.Server.Ghost;
-using Content.Server.Humanoid;
 using Content.Server.Maps;
 using Content.Server.Players.PlayTimeTracking;
 using Content.Server.Preferences.Managers;
@@ -109,7 +107,6 @@ namespace Content.Server.GameTicking
         [Dependency] private readonly IAdminLogManager _adminLogger = default!;
         [Dependency] private readonly ILogManager _logManager = default!;
         [Dependency] private readonly IConsoleHost _consoleHost = default!;
-        [Dependency] private readonly ServerSponsorsManager _sponsorsManager = default!; // Corvax-Sponsors
 #if EXCEPTION_TOLERANCE
         [Dependency] private readonly IRuntimeLog _runtimeLog = default!;
 #endif
@@ -123,6 +120,5 @@ namespace Content.Server.GameTicking
         [Dependency] private readonly ServerUpdateManager _serverUpdates = default!;
         [Dependency] private readonly PlayTimeTrackingSystem _playTimeTrackings = default!;
         [Dependency] private readonly UserDbDataManager _userDb = default!;
-        [Dependency] private readonly HumanoidSystem _humanoid = default!; // Corvax-Sponsors
     }
 }
