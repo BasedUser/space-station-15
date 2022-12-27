@@ -1,0 +1,48 @@
+- type: reaction
+  id: Artecalcet_art
+  reactants:
+    Aluminium:
+      amount: 2 
+    Silver:
+      amount: 3
+  products:
+    Artecalcet_art: 5
+
+- type: reaction
+  id: Arteicog_art
+  reactants:
+    Artecalcet_art:
+      amount: 1
+    Radium:
+      amount: 1
+    Plasma:
+      amount: 5
+      catalyst: true
+  products:
+    Arteicog_art: 2
+    
+- type: reaction
+  id: Gadoiprinim_art
+  reactants:
+    Artecalcet_art:
+      amount: 1
+    Potassium:
+      amount: 1
+    Plasma:
+      amount: 5
+      catalyst: true
+  products:
+    Gadoiprinim_art: 2
+
+- type: reaction
+  id: Vinikefastatin_art
+  reactants:
+    Artecalcet_art:
+      amount: 1
+    Iron:
+      amount: 1
+    Plasma:
+      amount: 5
+      catalyst: true
+  products:
+    Vinikefastatin_art: 2

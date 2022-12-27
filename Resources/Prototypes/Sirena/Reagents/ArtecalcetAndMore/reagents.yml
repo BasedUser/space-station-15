@@ -1,0 +1,80 @@
+- type: reagent
+  id: Artecalcet_art
+  name: reagent-name-artecalcet
+  desc: reagent-desc-artecalcet
+  physicalDesc: reagent-physical-desc-shiny
+  color: "#c0c0c0"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 2
+            
+- type: reagent
+  id: Arteicog_art
+  name: reagent-name-arteicog
+  desc: reagent-desc-arteicog
+  physicalDesc: reagent-physical-desc-shiny
+  color: "#b0b7c6"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Arteicog_art
+          max: 20
+        type: Local
+        visualType: Large
+        messages: [ "arteicog-effect-1", "arteicog-effect-2", "arteicog-effect-3" ]
+        probability: 0.3
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Arteicog_art
+          min: 30
+        type: Local
+        visualType: Large
+        messages: [ "arteicog-effect-4", "arteicog-effect-5", "arteicog-effect-6" ]
+        probability: 0.3
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Arteicog_art
+          min: 30
+        key: ForcedSleep
+        component: ForcedSleeping
+        refresh: false
+        type: Add
+    
+- type: reagent
+  id: Gadoiprinim_art
+  name: reagent-name-gadoiprinim
+  desc: reagent-desc-gadoiprinim
+  physicalDesc: reagent-physical-desc-shiny
+  color: "#b0b7c6"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "gadoiprinim-effect-1" ]
+        probability: 0.3
+
+- type: reagent
+  id: Vinikefastatin_art
+  name: reagent-name-vinikefastatin
+  desc: reagent-desc-vinikefastatin
+  physicalDesc: reagent-physical-desc-shiny
+  color: "#b0b7c6"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "vinikefastatin-effect-1", "vinikefastatin-effect-2", "vinikefastatin-effect-3", "vinikefastatin-effect-4", "vinikefastatin-effect-5" ]
+        probability: 0.3
