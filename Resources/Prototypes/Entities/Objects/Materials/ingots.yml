@@ -49,6 +49,17 @@
       - gold
       - gold_2
       - gold_3
+  - type: Extractable
+    grindableSolutionName: plasma
+  - type: SolutionContainerManager
+    solutions:
+      plasma:
+        reagents:
+        - ReagentId: Gold
+          Quantity: 10
+  - type: Tag
+    tags:
+    - Sheet
 
 - type: entity
   parent: IngotGold
@@ -83,6 +94,17 @@
       - silver
       - silver_2
       - silver_3
+  - type: Extractable
+    grindableSolutionName: plasma
+  - type: SolutionContainerManager
+    solutions:
+      plasma:
+        reagents:
+        - ReagentId: Silver
+          Quantity: 10
+  - type: Tag
+    tags:
+    - Sheet
 
 - type: entity
   parent: IngotSilver
